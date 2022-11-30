@@ -17,11 +17,13 @@ const buttonPlayEightyOne = document.querySelector("button.btn-81");
 const buttonPlayFourtyNine = document.querySelector("button.btn-49");
 
 buttonPlayHundred.addEventListener("click", function(){
+    gridContainer.innerHTML = " ";
 
     getForLoop(100, "square-100");
 })
 
 buttonPlayEightyOne.addEventListener("click", function(){
+    gridContainer.innerHTML = " ";
     
     getForLoop(81, "square-81");
 })
