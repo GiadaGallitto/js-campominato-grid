@@ -14,9 +14,14 @@ for(let i=1; i <= 100; i++){
 
     const newSquare = getNewSquare(i);
     
-    gridContainer.appendChild(newSquare);
+    const buttonPlay = document.querySelector("div.div-buttons")
+
+    buttonPlay.addEventListener("click", function(){
+        gridContainer.appendChild(newSquare);
+    })
 
 }
+
 
 function getNewSquare(content){
     
