@@ -12,11 +12,19 @@ const gridContainer = document.querySelector("div.grid")
 
 for(let i=1; i <= 100; i++){
 
-    const newSquare = document.createElement("div");
+    const newSquare = getNewSquare();
 
+    newSquare.innerHTML = getNewSquare(i)
+    
+    gridContainer.appendChild(newSquare);
+}
+
+function getNewSquare(){
+
+    const newSquare = document.createElement("div");
+    
     newSquare.classList.add("square");
 
-    newSquare.innerHTML = (i)
+    return newSquare
 
-    gridContainer.appendChild(newSquare);
 }
