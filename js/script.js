@@ -17,32 +17,28 @@ const buttonPlayEightyOne = document.querySelector("button.btn-81");
 const buttonPlayFourtyNine = document.querySelector("button.btn-49");
 
 buttonPlayHundred.addEventListener("click", function(){
-    gridContainer.innerHTML = " "
+    gridContainer.innerHTML = " ";
 
-    getForLoop(100, "square-100")
+    getForLoop(100, "square-100");
+})
 
-    })
-
-    buttonPlayEightyOne.addEventListener("click", function(){
-        gridContainer.innerHTML = " "
-        
-        getForLoop(81, "square-81")
+buttonPlayEightyOne.addEventListener("click", function(){
+    gridContainer.innerHTML = " ";
     
-        })
+    getForLoop(81, "square-81");
+})
 
-        buttonPlayFourtyNine.addEventListener("click", function(){
-            gridContainer.innerHTML = " "
-            
-            getForLoop(49, "square-49")
-        
-            })
+buttonPlayFourtyNine.addEventListener("click", function(){
+    gridContainer.innerHTML = " ";
+
+    getForLoop(49, "square-49");
+})
 
 function getForLoop(quantity, numClass){
 
     for(let i=1; i <= quantity; i++){
     
         const newSquare = getNewSquare(i, numClass);
-        
     
         gridContainer.appendChild(newSquare);
     }
@@ -56,9 +52,8 @@ function getNewSquare(content, numClass){
     
     newSquare.addEventListener("click", function(){
         newSquare.classList.toggle("clicked");
-        console.log(content)
+        console.log(content);
     })
 
-    return newSquare
-
+    return newSquare;
 }
