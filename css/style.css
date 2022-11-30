@@ -1,0 +1,22 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    background-color: rgb(5, 5, 78);
+    height: 80vh;
+    color: white;
+    font-weight: 600;
+}
+
+div.grid{
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+}
+
+.grid div.square{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 3px solid black;
+}
