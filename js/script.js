@@ -13,10 +13,12 @@ const gridContainer = document.querySelector("div.grid")
 for(let i=1; i <= 100; i++){
 
     const newSquare = getNewSquare();
-
-    newSquare.innerHTML = getNewSquare(i)
     
     gridContainer.appendChild(newSquare);
+
+    newSquare.addEventListener("click", function(){
+        newSquare.classList.toggle("clicked");
+    })
 }
 
 function getNewSquare(){
