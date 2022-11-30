@@ -16,6 +16,9 @@ div.grid{
 }
 
 div.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 3px solid black;
