@@ -10,17 +10,21 @@
 
 const gridContainer = document.querySelector("div.grid")
 
-for(let i=1; i <= 100; i++){
+const buttonPlay = document.querySelector("div.div-buttons")
 
-    const newSquare = getNewSquare(i);
+buttonPlay.addEventListener("click", function(){
+    gridContainer.innerHTML = " "
     
-    const buttonPlay = document.querySelector("div.div-buttons")
-
-    buttonPlay.addEventListener("click", function(){
+    for(let i=1; i <= 100; i++){
+    
+        const newSquare = getNewSquare(i);
+        
+    
         gridContainer.appendChild(newSquare);
+    }
+
     })
 
-}
 
 
 function getNewSquare(content){
