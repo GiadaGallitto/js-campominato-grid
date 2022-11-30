@@ -8,32 +8,51 @@
 // Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
-const gridContainer = document.querySelector("div.grid")
+const gridContainer = document.querySelector("div.grid");
 
-const buttonPlay = document.querySelector("div.div-buttons")
+const buttonPlayHundred = document.querySelector("button.btn-100");
 
-buttonPlay.addEventListener("click", function(){
+const buttonPlayEightyOne = document.querySelector("button.btn-81");
+
+const buttonPlayFourtyNine = document.querySelector("button.btn-49");
+
+buttonPlayHundred.addEventListener("click", function(){
     gridContainer.innerHTML = " "
+
+    getForLoop(100, "square-100")
+
+    })
+
+    buttonPlayEightyOne.addEventListener("click", function(){
+        gridContainer.innerHTML = " "
+        
+        getForLoop(81, "square-81")
     
-    for(let i=1; i <= 100; i++){
+        })
+
+        buttonPlayFourtyNine.addEventListener("click", function(){
+            gridContainer.innerHTML = " "
+            
+            getForLoop(49, "square-49")
+        
+            })
+
+function getForLoop(quantity, numClass){
+
+    for(let i=1; i <= quantity; i++){
     
-        const newSquare = getNewSquare(i);
+        const newSquare = getNewSquare(i, numClass);
         
     
         gridContainer.appendChild(newSquare);
     }
+}
 
-    })
-
-
-
-function getNewSquare(content){
+function getNewSquare(content, numClass){
     
     const newSquare = document.createElement("div");
     
-    newSquare.classList.add("square");
-
-    // newSquare.innerHTML = `${content}`
+    newSquare.classList.add(numClass);
     
     newSquare.addEventListener("click", function(){
         newSquare.classList.toggle("clicked");

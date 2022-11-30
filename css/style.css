@@ -19,12 +19,30 @@ div.grid{
     border: 3px solid black;
 }
 
-div.square{
+div.square-100{
     display: flex;
     justify-content: center;
     align-items: center;
     width: calc(100% / 10);
     height: calc(100% / 10);
+    border: 3px solid black;
+}
+
+div.square-81{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 3px solid black;
+}
+
+div.square-49{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
     border: 3px solid black;
 }
 
